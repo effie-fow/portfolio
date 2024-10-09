@@ -1,0 +1,16 @@
+@use "../../styles/partials/layout/display";
+
+.home {
+  text-align: center;
+  @include display.flexbox(column, center, center, wrap, 1rem);
+
+  &__heading {
+    font-size: 6rem;
+    font-weight: 400;
+  }
+
+  &__subheading {
+    font-family: "Caveat";
+    font-size: 3rem;
+  }
+}

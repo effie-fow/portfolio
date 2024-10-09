@@ -1,2 +1,32 @@
 @use "./styles/partials/base/resets";
 @use "./styles/partials/base/typography";
+@use "./styles/partials/base/breakpoints";
+@use "./styles/partials/animations/slow-rotate";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    height: 115%;
+    // animation: 230s linear infinite slow-rotate;
+
+    @include breakpoints.large-mobile {
+      height: 130%;
+    }
+
+    @include breakpoints.desktop {
+      width: 110%;
+      height: auto;
+    }
+  }
+}

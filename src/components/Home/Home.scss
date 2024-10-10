@@ -1,16 +1,51 @@
 @use "../../styles/partials/layout/display";
+@use "../../styles/partials/base/breakpoints";
 
 .home {
   text-align: center;
   @include display.flexbox(column, center, center, wrap, 1rem);
 
   &__heading {
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 400;
+    transition: font-size 0.2s linear;
+
+    @include breakpoints.medium-mobile {
+      font-size: 3.4rem;
+    }
+
+    @include breakpoints.large-mobile {
+      font-size: 5rem;
+    }
+
+    @include breakpoints.tablet {
+      font-size: 5.5rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 6rem;
+    }
   }
 
   &__subheading {
     font-family: "Caveat";
-    font-size: 3rem;
+    font-size: 1.5rem;
+    transition: font-size 0.2s linear;
+
+    @include breakpoints.medium-mobile {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoints.large-mobile {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoints.tablet {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 3rem;
+    }
   }
 }

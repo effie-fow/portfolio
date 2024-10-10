@@ -1,6 +1,7 @@
 @use "./styles/partials/base/resets";
 @use "./styles/partials/base/typography";
 @use "./styles/partials/base/breakpoints";
+@use "./styles/partials/layout/display";
 @use "./styles/partials/animations/slow-rotate";
 
 .main {
@@ -8,17 +9,13 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  @include display.flexbox(column, center, center, wrap);
 
   &__background {
     position: absolute;
     z-index: -1;
     height: 115%;
-    // animation: 230s linear infinite slow-rotate;
+    animation: 230s linear infinite slow-rotate;
 
     @include breakpoints.large-mobile {
       height: 130%;

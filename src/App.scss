@@ -15,7 +15,7 @@
     position: absolute;
     z-index: -1;
     height: 115%;
-    animation: 230s linear infinite slow-rotate;
+    // animation: 230s linear infinite slow-rotate;
 
     @include breakpoints.large-mobile {
       height: 130%;

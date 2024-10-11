@@ -1,3 +1,6 @@
+@use "./breakpoints";
+@use "./color";
+
 @font-face {
   font-family: "Caveat";
   src: url(./assets/fonts/caveat/caveat-regular.ttf) format("truetype");
@@ -73,4 +76,52 @@
   src: url(./assets/fonts/karla/karla-bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
+}
+
+@mixin page-heading {
+  color: color.$primary;
+  font-weight: 400;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+
+  @include breakpoints.desktop {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@mixin section-heading {
+  color: color.$dark;
+  font-weight: 400;
+  font-size: 1.75rem;
+  padding-bottom: 0.5rem;
+
+  @include breakpoints.desktop {
+    padding-bottom: 0.25rem;
+  }
+}
+
+@mixin plain-text {
+  color: color.$dark;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.12rem;
+  padding-bottom: 2rem;
+
+  @include breakpoints.desktop {
+    font-size: 0.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.1rem;
+    padding: 0 2rem 1rem 0;
+  }
+}
+
+@mixin plain-text-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: color.$primary;
+
+  &:hover {
+    color: color.$primary-hover;
+  }
 }

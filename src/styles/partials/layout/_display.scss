@@ -1,3 +1,6 @@
+@use "../base/breakpoints";
+@use "../base/color";
+
 @mixin flexbox($direction, $justify, $align, $wrap, $gap: unset) {
   display: flex;
   flex-direction: $direction;
@@ -5,4 +8,26 @@
   align-items: $align;
   flex-wrap: $wrap;
   gap: $gap;
+}
+
+@mixin page-card {
+  margin: 2rem 0 6rem;
+  padding: 1rem;
+  width: 90%;
+  height: 100%;
+  border-radius: 0.3rem;
+  background-color: color.$light-opaque;
+  box-shadow: 0 0 1.5rem 0.1rem rgba(0, 0, 0, 0.23);
+  overflow-y: scroll;
+  scrollbar-color: color.$primary transparent;
+
+  @include breakpoints.large-mobile {
+    margin: 2.5rem 0 9rem;
+    padding: 1.5rem;
+  }
+
+  @include breakpoints.desktop {
+    margin: 4rem 0 9rem;
+    scrollbar-width: thin;
+  }
 }

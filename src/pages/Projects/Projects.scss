@@ -1,0 +1,69 @@
+@use "../../styles/partials/layout/display";
+@use "../../styles/partials/base/typography";
+@use "../../styles/partials/base/breakpoints";
+
+.projects {
+  @include display.page-card;
+
+  &__information {
+    @include display.flexbox(column, center, center, wrap);
+
+    @include breakpoints.tablet {
+      @include display.flexbox(column, center, start, wrap);
+    }
+  }
+
+  &__logo {
+    height: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoints.large-mobile {
+      height: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoints.tablet {
+      margin-top: 0.5rem;
+      margin-left: -0.5rem;
+    }
+  }
+
+  &__details {
+    @include typography.plain-text;
+  }
+
+  &__subheading {
+    @include typography.section-heading;
+  }
+
+  &__tech-stack-container {
+    @include breakpoints.desktop {
+      padding-top: 1rem;
+    }
+  }
+
+  &__tech-stack-icons {
+    width: 100%;
+    padding: 0.5rem 0;
+    @include display.flexbox(row, space-between, start, wrap, 0.75rem);
+
+    @include breakpoints.large-mobile {
+      padding-bottom: 2rem;
+      @include display.flexbox(row, start, start, wrap, 0.75rem);
+    }
+  }
+
+  &__buttons-container {
+    padding: 1rem 0;
+    @include display.flexbox(column, center, center, wrap, 1.5rem);
+
+    @include breakpoints.tablet {
+      @include display.flexbox(row, center, center, wrap, 1.5rem);
+    }
+
+    @include breakpoints.desktop {
+      @include display.flexbox(row, end, center, wrap, 1.5rem);
+    }
+  }
+}

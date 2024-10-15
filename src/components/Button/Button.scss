@@ -1,0 +1,36 @@
+@use "../../styles/partials/base/color";
+@use "../../styles/partials/layout/display";
+
+.button {
+  width: 14rem;
+  color: color.$dark;
+  background-color: color.$secondary;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  box-shadow: 0.15rem 0.15rem 0.2rem 0.03rem rgba(0, 0, 0, 0.319);
+  text-decoration: none;
+  transition: background-color 0.4s ease-out;
+  @include display.flexbox(row, start, center, wrap);
+
+  &:hover {
+    background-color: color.$secondary-hover;
+  }
+
+  &:active {
+    background-color: color.$secondary-hover;
+    transform: translate(0.15rem, 0.15rem);
+    box-shadow: inset 0.1rem 0.1rem 0.2rem 0.03rem rgba(0, 0, 0, 0.319);
+  }
+
+  &__icon {
+    height: 2rem;
+  }
+
+  &__text {
+    flex-grow: 1;
+    color: color.$light;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

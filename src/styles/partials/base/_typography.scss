@@ -81,7 +81,7 @@
 @mixin page-heading {
   color: color.$primary;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.25rem;
   padding-bottom: 1rem;
 
   @include breakpoints.desktop {
@@ -109,7 +109,7 @@
   padding-bottom: 2rem;
 
   @include breakpoints.desktop {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.45rem;
     letter-spacing: 0.1rem;
     padding: 0 2rem 1rem 0;

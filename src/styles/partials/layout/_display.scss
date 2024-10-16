@@ -12,7 +12,7 @@
 
 @mixin page-card {
   margin: 2rem 0 6rem;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 90%;
   height: 100%;
   border-radius: 0.3rem;
@@ -23,7 +23,7 @@
 
   @include breakpoints.large-mobile {
     margin: 2.5rem 0 9rem;
-    padding: 1.5rem;
+    padding: 1.75rem;
   }
 
   @include breakpoints.desktop {

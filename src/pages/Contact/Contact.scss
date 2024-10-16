@@ -1,0 +1,104 @@
+@use "../../styles/partials/base/typography";
+@use "../../styles/partials/base/breakpoints";
+@use "../../styles/partials/base/color";
+@use "../../styles/partials/layout/display";
+@use "../../styles/partials/layout/padding";
+
+// TEST STARTED HERE
+.contact {
+  margin: 2rem 0 6rem;
+  padding: 1rem;
+  width: 90%;
+  height: 100%;
+  @include display.flexbox(row, center, center, wrap);
+  @include display.page-card;
+
+  @include breakpoints.desktop {
+    max-width: 45rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &__flex-container {
+    width: 100%;
+    @include display.flexbox(row, center, start, wrap);
+  }
+
+  &__heading {
+    color: color.$dark;
+    font-size: 2.5rem;
+    font-weight: 300;
+    transition: font-size 0.2s linear;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoints.large-mobile {
+      font-size: 2.75rem;
+    }
+
+    @include breakpoints.tablet {
+      font-size: 3rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 3.25rem;
+    }
+  }
+
+  &__subheading {
+    color: color.$primary;
+    font-weight: 300;
+    font-size: 1.5rem;
+    transition: font-size 0.2s linear;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoints.large-mobile {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoints.tablet {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 1.9rem;
+    }
+  }
+
+  &__details {
+    padding: 0 1rem;
+    @include typography.plain-text;
+  }
+
+  &__thank-you {
+    font-family: "Caveat";
+    font-size: 1.5rem;
+    transition: font-size 0.2s linear;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoints.medium-mobile {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoints.large-mobile {
+      font-size: 2rem;
+    }
+
+    @include breakpoints.tablet {
+      font-size: 2.25rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__buttons-container {
+    padding-top: 2rem;
+    @include display.flexbox(row, space-between, center, wrap, 1.5rem);
+  }
+}

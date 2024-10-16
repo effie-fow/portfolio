@@ -1,5 +1,6 @@
 @use "../../styles/partials/layout/display";
 @use "../../styles/partials/base/breakpoints";
+@use "../../styles/partials/animations/appear";
 
 .home {
   text-align: center;
@@ -8,6 +9,8 @@
   &__heading {
     font-size: 3rem;
     font-weight: 400;
+    opacity: 0;
+    animation: 3.5s ease 0.25s 1 appear forwards;
     transition: font-size 0.2s linear;
 
     @include breakpoints.medium-mobile {
@@ -30,6 +33,8 @@
   &__subheading {
     font-family: "Caveat";
     font-size: 1.5rem;
+    opacity: 0;
+    animation: 4.5s ease 1.5s 1 appear forwards;
     transition: font-size 0.2s linear;
 
     @include breakpoints.medium-mobile {

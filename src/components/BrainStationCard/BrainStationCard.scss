@@ -1,0 +1,35 @@
+@use "../../styles/partials/base/color";
+@use "../../styles/partials/base/typography";
+@use "../../styles/partials/layout/display";
+
+.brainstation-card {
+  @include display.flexbox(row, start, center, wrap, 0.75rem);
+
+  &__logo {
+    height: 3rem;
+  }
+
+  &__details {
+    @include display.flexbox(column, center, start, wrap);
+  }
+
+  &__subheading {
+    @include typography.label;
+
+    & {
+      font-weight: 500;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  &__grade {
+    @extend .brainstation-card__subheading;
+    color: color.$primary;
+  }
+
+  &__date {
+    @include typography.label;
+    line-height: 1rem;
+  }
+}

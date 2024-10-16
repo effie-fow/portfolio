@@ -3,17 +3,15 @@
 @use "../../styles/partials/base/typography";
 
 .icon-card {
+  width: 3rem;
+  padding-bottom: 0.25rem;
   @include display.flexbox(column, center, center, wrap);
 
   &__icon {
-    height: 2.5rem;
+    height: 2rem;
   }
 
   &__name {
-    color: color.$dark;
-    font-weight: 300;
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.12rem;
+    @include typography.label;
   }
 }

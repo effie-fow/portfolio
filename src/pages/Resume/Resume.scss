@@ -1,0 +1,64 @@
+@use "../../styles/partials/base/typography";
+@use "../../styles/partials/base/breakpoints";
+@use "../../styles/partials/layout/display";
+@use "../../styles/partials/layout/padding";
+
+.resume {
+  @include display.page-card;
+
+  &__heading {
+    @include typography.page-heading;
+  }
+
+  &__details {
+    @include breakpoints.desktop {
+      @include display.flexbox(row, space-between, start, wrap);
+    }
+  }
+
+  &__skills {
+    @include breakpoints.desktop {
+      width: 32%;
+    }
+  }
+
+  &__experience {
+    @include breakpoints.desktop {
+      width: 68%;
+    }
+  }
+
+  &__subheading {
+    margin-bottom: 0.5rem;
+    @include typography.section-heading;
+  }
+
+  &__learning {
+    padding-top: padding.$section-gap;
+    @include display.flexbox(column, start, start, wrap);
+
+    @include breakpoints.desktop {
+      padding-top: 0;
+    }
+  }
+
+  &__education {
+    padding-top: padding.$section-gap;
+
+    @include breakpoints.desktop {
+      padding-top: 0;
+    }
+  }
+
+  &__experience {
+    padding-top: padding.$section-gap;
+
+    @include breakpoints.large-mobile {
+      padding-top: 2rem;
+    }
+
+    @include breakpoints.desktop {
+      padding-top: 0;
+    }
+  }
+}

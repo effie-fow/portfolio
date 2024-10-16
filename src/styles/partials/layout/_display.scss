@@ -28,6 +28,7 @@
 
   @include breakpoints.desktop {
     margin: 4rem 0 9rem;
+    max-width: 85rem;
     scrollbar-width: thin;
   }
 }

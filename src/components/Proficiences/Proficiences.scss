@@ -1,0 +1,5 @@
+@use "../../styles/partials/layout/display";
+
+.proficiences {
+  @include display.flexbox(row, start, center, wrap, 1rem);
+}

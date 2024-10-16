@@ -125,3 +125,11 @@
     color: color.$primary-hover;
   }
 }
+
+@mixin label {
+  color: color.$dark;
+  font-weight: 300;
+  font-size: 0.6rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.12rem;
+}

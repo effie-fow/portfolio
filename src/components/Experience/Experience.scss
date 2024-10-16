@@ -1,0 +1,11 @@
+@use "../../styles/partials/base/typography";
+
+.experience {
+  &__plain-text {
+    @include typography.plain-text;
+  }
+
+  &__link {
+    @include typography.plain-text-link;
+  }
+}

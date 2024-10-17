@@ -47,6 +47,10 @@
       padding: 0 1.25rem;
     }
 
+    @include breakpoints.desktop {
+      letter-spacing: 0.1rem;
+    }
+
     &:hover {
       color: color.$primary;
     }

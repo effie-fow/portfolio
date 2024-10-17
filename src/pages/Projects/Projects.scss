@@ -49,8 +49,12 @@
     @include display.flexbox(row, space-between, start, wrap, 0.75rem);
 
     @include breakpoints.large-mobile {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       @include display.flexbox(row, start, start, wrap, 0.75rem);
+    }
+
+    @include breakpoints.desktop {
+      padding-bottom: 0;
     }
   }
 

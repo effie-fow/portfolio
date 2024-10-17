@@ -7,15 +7,26 @@ import { Interests } from "./pages/Interests/Interests";
 import { Projects } from "./pages/Projects/Projects";
 import { Resume } from "./pages/Resume/Resume";
 import { Contact } from "./pages/Contact/Contact";
+import { useState } from "react";
+import { RotationButton } from "./components/RotationButton/RotationButton";
 
 function App() {
+  const [rotate, setRotate] = useState(true);
+
+  const handleRotateClick = () => {
+    rotate ? setRotate(false) : setRotate(true);
+  };
+
   return (
     <main className="main">
       <img
         src={backroundImage}
         alt="Background image of floating, pastel-coloured blobs"
-        className="main__background"
+        className={`main__background ${
+          rotate ? "" : "main__background--no-rotation"
+        }`}
       />
+      <RotationButton rotate={rotate} handleRotateClick={handleRotateClick} />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

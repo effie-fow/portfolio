@@ -15,10 +15,15 @@
     position: absolute;
     z-index: -1;
     height: 115%;
+    transition: transform 1s linear;
     animation: 600s linear infinite slow-rotate;
 
     @include breakpoints.large-mobile {
       height: 130%;
+    }
+
+    &--no-rotation {
+      animation: none;
     }
 
     @include breakpoints.desktop {

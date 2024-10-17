@@ -18,16 +18,16 @@ function App() {
   };
 
   return (
-    <main className="main">
-      <img
-        src={backroundImage}
-        alt="Background image of floating, pastel-coloured blobs"
-        className={`main__background ${
-          rotate ? "" : "main__background--no-rotation"
-        }`}
-      />
-      <RotationButton rotate={rotate} handleRotateClick={handleRotateClick} />
-      <BrowserRouter>
+    <BrowserRouter>
+      <main className="main">
+        <img
+          src={backroundImage}
+          alt="Background image of floating, pastel-coloured blobs"
+          className={`main__background ${
+            rotate ? "" : "main__background--no-rotation"
+          }`}
+        />
+        <RotationButton rotate={rotate} handleRotateClick={handleRotateClick} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
@@ -36,8 +36,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-    </main>
+      </main>
+    </BrowserRouter>
   );
 }
 

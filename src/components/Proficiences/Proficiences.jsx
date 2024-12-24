@@ -12,10 +12,10 @@ import jest from "../../assets/logos/jest.svg";
 import mysql from "../../assets/logos/mysql.svg";
 import netlify from "../../assets/logos/netlify.svg";
 import node from "../../assets/logos/node.svg";
-import photoshop from "../../assets/logos/photoshop.svg";
 import react from "../../assets/logos/react.svg";
 import sass from "../../assets/logos/sass.svg";
 import slack from "../../assets/logos/slack.svg";
+import typescript from "../../assets/logos/typescript.svg";
 import { IconCard } from "../IconCard/IconCard";
 
 export const Proficiences = () => {
@@ -26,6 +26,7 @@ export const Proficiences = () => {
       <IconCard icon={express} name="Express" />
       <IconCard icon={mysql} name="MySQL" />
       <IconCard icon={javascript} name="JS" />
+      <IconCard icon={typescript} name="TS" />
       <IconCard icon={html5} name="HTML" />
       <IconCard icon={css} name="CSS" />
       <IconCard icon={sass} name="Sass" />

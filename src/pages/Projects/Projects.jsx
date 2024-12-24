@@ -17,15 +17,15 @@ export const Projects = () => {
       <div className="projects__information">
         <img src={halfFullLogo} alt="Half Full" className="projects__logo" />
         <p className="projects__details">
-          The most recent project I have chosen to spotlight here is my Capstone
-          Project, ‘Half Full Refills’, which I designed and created at
-          BrainStation’s Software Engineering Bootcamp in London.
+          ‘Half Full Refills’ is a full-stack web app which which I designed and
+          created at BrainStation’s Software Engineering Bootcamp in London, as
+          my Capstone Project.
         </p>
         <p className="projects__details">
-          ‘Half Full’ is the store locator connecting you to the best produce
-          and products in your community. It aims to make it easy to support
-          local people and businesses, feel good about your waste-free shopping,
-          and eat well.
+          It is the store locator connecting you to the best produce and
+          products in your community. It aims to make it easy to support local
+          people and businesses, feel good about your waste-free shopping, and
+          eat well.
         </p>
         <p className="projects__details">
           I took heaps of joy and a lot of pride in building my first full-stack

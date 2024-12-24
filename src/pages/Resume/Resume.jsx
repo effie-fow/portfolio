@@ -1,8 +1,8 @@
 import "./Resume.scss";
 import { BrainStationCard } from "../../components/BrainStationCard/BrainStationCard";
-import { IconCard } from "../../components/IconCard/IconCard";
 import { Proficiences } from "../../components/Proficiences/Proficiences";
 import { Experience } from "../../components/Experience/Experience";
+import { KrakenCard } from "../../components/KrakenCard/KrakenCard";
 
 export const Resume = () => {
   return (
@@ -12,6 +12,10 @@ export const Resume = () => {
         <section className="resume__skills">
           <h2 className="resume__subheading">Proficiences</h2>
           <Proficiences />
+          <div className="resume__education">
+            <h2 className="resume__subheading">Kraken Technologies</h2>
+            <KrakenCard />
+          </div>
           <div className="resume__education">
             <h2 className="resume__subheading">BrainStation</h2>
             <BrainStationCard />

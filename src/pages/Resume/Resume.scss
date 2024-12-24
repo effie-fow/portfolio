@@ -44,10 +44,6 @@
 
   &__education {
     padding-top: padding.$section-gap;
-
-    @include breakpoints.desktop {
-      padding-top: 0;
-    }
   }
 
   &__experience {

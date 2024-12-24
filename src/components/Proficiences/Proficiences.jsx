@@ -27,12 +27,12 @@ export const Proficiences = () => {
       <IconCard icon={mysql} name="MySQL" />
       <IconCard icon={javascript} name="JS" />
       <IconCard icon={typescript} name="TS" />
-      <IconCard icon={html5} name="HTML" />
-      <IconCard icon={css} name="CSS" />
+      {/* <IconCard icon={html5} name="HTML" /> */}
+      {/* <IconCard icon={css} name="CSS" /> */}
       <IconCard icon={sass} name="Sass" />
       <IconCard icon={jest} name="Jest" />
-      <IconCard icon={netlify} name="Netlify" />
-      <IconCard icon={heroku} name="Heroku" />
+      {/* <IconCard icon={netlify} name="Netlify" /> */}
+      {/* <IconCard icon={heroku} name="Heroku" /> */}
       <IconCard icon={git} name="Git" />
       <IconCard icon={github} name="GitHub" />
       <IconCard icon={slack} name="Slack" />
